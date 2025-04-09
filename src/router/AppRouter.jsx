@@ -7,17 +7,17 @@ import AuthLayout from '../layouts/AuthLayout/AuthLayout';
 
 // Pages
 import HomePage from '../pages/HomePage/HomePage';
-import LoginPage from '../pages/LoginPage/LoginPage';
-import RegisterPage from '../pages/RegisterPage/RegisterPage';
-import DashboardPage from '../pages/DashboardPage/DashboardPage';
-import AccountsPage from '../pages/AccountsPage/AccountsPage';
-import AccountDetailsPage from '../pages/AccountDetailsPage/AccountDetailsPage';
-import CustomersPage from '../pages/CustomersPage/CustomersPage';
-import CustomerDetailsPage from '../pages/CustomerDetailsPage/CustomerDetailsPage';
-import ProjectsPage from '../pages/ProjectsPage/ProjectsPage';
-import ProjectDetailsPage from '../pages/ProjectDetailsPage/ProjectDetailsPage';
-import ContractsPage from '../pages/ContractsPage/ContractsPage';
-import ContractDetailsPage from '../pages/ContractDetailsPage/ContractDetailsPage';
+// import LoginPage from '../pages/LoginPage/LoginPage';
+// import RegisterPage from '../pages/RegisterPage/RegisterPage';
+// import DashboardPage from '../pages/DashboardPage/DashboardPage';
+// import AccountsPage from '../pages/AccountsPage/AccountsPage';
+// import AccountDetailsPage from '../pages/AccountDetailsPage/AccountDetailsPage';
+// import CustomersPage from '../pages/CustomersPage/CustomersPage';
+// import CustomerDetailsPage from '../pages/CustomerDetailsPage/CustomerDetailsPage';
+// import ProjectsPage from '../pages/ProjectsPage/ProjectsPage';
+// import ProjectDetailsPage from '../pages/ProjectDetailsPage/ProjectDetailsPage';
+// import ContractsPage from '../pages/ContractsPage/ContractsPage';
+// import ContractDetailsPage from '../pages/ContractDetailsPage/ContractDetailsPage';
 
 // Context
 import { useAuth } from '../hooks/useAuth';
@@ -33,13 +33,13 @@ const AppRouter = () => {
             </Route>
 
             {/* Auth routes */}
-            <Route path="auth" element={<AuthLayout />}>
+            {/* <Route path="auth" element={<AuthLayout />}>
                 <Route path="login" element={<LoginPage />} />
                 <Route path="register" element={<RegisterPage />} />
-            </Route>
+            </Route> */}
 
             {/* Protected routes */}
-            <Route
+            {/* <Route
                 path="dashboard"
                 element={
                     isAuthenticated ? <MainLayout /> : <Navigate to="/auth/login" />
@@ -54,7 +54,7 @@ const AppRouter = () => {
                 <Route path="projects/:id" element={<ProjectDetailsPage />} />
                 <Route path="contracts" element={<ContractsPage />} />
                 <Route path="contracts/:id" element={<ContractDetailsPage />} />
-            </Route>
+            </Route> */}
 
             {/* Catch all */}
             <Route path="*" element={<Navigate to="/" />} />
